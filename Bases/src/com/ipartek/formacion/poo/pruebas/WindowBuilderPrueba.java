@@ -2,13 +2,11 @@ package com.ipartek.formacion.poo.pruebas;
 
 import java.awt.EventQueue;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.BorderLayout;
-import javax.swing.SwingConstants;
 import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.FlowLayout;
+import javax.swing.SwingConstants;
 
 public class WindowBuilderPrueba {
 
