@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<form action="hola-jsp" method="post">
+	<form action="hola" method="post">
 		<input name="nombre" placeholder="Dime tu nombre">
 		<input name="password" type="password">
 		<button>Saludar</button>
