@@ -18,4 +18,4 @@
 	<button type="submit" class="btn btn-primary">Login</button>
 </form>
 
-<%@ include file="/WEB-INF/vistas/includes/pie.jsp"%>html>
+<%@ include file="/WEB-INF/vistas/includes/pie.jsp"%>
