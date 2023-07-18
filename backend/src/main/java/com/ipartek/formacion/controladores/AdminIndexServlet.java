@@ -24,10 +24,6 @@ public class AdminIndexServlet extends HttpServlet {
        
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final String RUTA = getServletContext().getRealPath("/WEB-INF/sql/bases.db");
-		final String URL = "jdbc:sqlite:" + RUTA;
-		final String SQL_SELECT = "SELECT * FROM productos";
-		
 		List<Producto> productos = new ArrayList<>();
 
 		try {
@@ -36,8 +32,8 @@ public class AdminIndexServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		try (Connection con = DriverManager.getConnection(URL);
-				PreparedStatement pst = con.prepareStatement(SQL_SELECT);
+		try (Connection con = new DBHelper(getServletContext()).getConexion();
+				PreparedStatement pst = con.prepareStatement(DBHelper.SQL_SELECT);
 				ResultSet rs = pst.executeQuery()) {
 
 			while (rs.next()) {

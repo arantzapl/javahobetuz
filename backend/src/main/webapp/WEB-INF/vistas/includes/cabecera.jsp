@@ -10,6 +10,7 @@
 <title>Tienda</title>
 <base href="${pageContext.request.contextPath}/">
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-icons.min.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
@@ -41,4 +42,12 @@
 			</div>
 		</div>
 	</nav>
+	<c:if test="${error != null}">
+		<div class="alert alert-danger alert-dismissible fade show"
+			role="alert">
+			${error}
+			<button type="button" class="btn-close" data-bs-dismiss="alert"
+				aria-label="Close"></button>
+		</div>
+	</c:if>
 	<main class="my-3 container">

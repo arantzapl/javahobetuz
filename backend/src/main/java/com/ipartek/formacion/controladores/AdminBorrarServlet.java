@@ -20,20 +20,10 @@ public class AdminBorrarServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String idString = request.getParameter("id");
 		
-		Long id = Long.parseLong(idString);
+		Long id = Long.parseLong(idString);	
 		
-		final String RUTA = getServletContext().getRealPath("/WEB-INF/sql/bases.db");
-		final String URL = "jdbc:sqlite:" + RUTA;
-		final String SQL_DELETE = "DELETE FROM productos WHERE id=?";
-		
-		try {
-			Class.forName("org.sqlite.JDBC");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		try (Connection con = DriverManager.getConnection(URL);
-				PreparedStatement pst = con.prepareStatement(SQL_DELETE)) {
+		try (Connection con = new DBHelper(getServletContext()).getConexion();
+				PreparedStatement pst = con.prepareStatement(DBHelper.SQL_DELETE)) {
 
 			pst.setLong(1, id);
 			pst.executeUpdate();
