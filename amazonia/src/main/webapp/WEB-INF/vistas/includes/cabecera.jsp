@@ -58,7 +58,7 @@
 				class="bi bi-caret-down-fill"></i></span>
 		</a> <a class="btn text-white" href="#"> Devoluciones<br /> <span
 			class="fw-bold">y Pedidos</span>
-		</a> <a class="btn text-white fw-bold d-flex align-items-center" href="#">
+		</a> <a class="btn text-white fw-bold d-flex align-items-center" href="cesta">
 			<i class="bi bi-cart fs-1"></i> Cesta
 		</a>
 	</header>
@@ -80,11 +80,11 @@
 				<ul class="navbar-nav flex-row p-1">
 					<li class="navbar-text">${usuario}</li>
 
-					<c:if test="${usuario == null}">
+					<c:if test="${usuario == null }">
 						<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
 					</c:if>
 
-					<c:if test="${usuario != null}">
+					<c:if test="${usuario != null }">
 						<li class="nav-item"><a class="nav-link" href="admin/index">Administración</a></li>
 						<li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
 					</c:if>
@@ -109,14 +109,48 @@
 			</ul>
 		</div>
 	</div>
-	<nav id="opciones-blanco" class="border-bottom">
-		<ul class="d-flex justify-content-around list-unstyled m-0 p-1">
-			<li><a class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold" href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
-			<li><a class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold" href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
-			<li><a class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold" href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
-			<li><a class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold" href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
-			<li><a class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold" href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
-			<li><a class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold" href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+	<nav class="opciones-claras border-bottom bg-secondary-subtle py-1">
+		<ul class="d-flex justify-content-left list-unstyled m-0">
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+		</ul>
+	</nav>
+	<nav class="opciones-claras border-bottom pt-3">
+		<ul class="d-flex justify-content-left list-unstyled m-0">
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
+			<li class="px-2"><a
+				class="text-dark link-underline-warning link-offset-3-hover link-underline-opacity-0 link-underline-opacity-100-hover fw-bold"
+				href="#">&nbsp;&nbsp;Opción&nbsp;&nbsp;</a></li>
 		</ul>
 	</nav>
 	<c:if test="${error != null}">

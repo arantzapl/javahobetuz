@@ -37,14 +37,14 @@
 					</div>
 					<div class="p-3 h-100">
 						<p class="my-1">
-							<a href="#?${a.id}"><img
+							<a href="detalle?id=${a.id}"><img
 								src="https://picsum.photos/300/200?${a.id}" class="img-fluid"
 								alt=""></a>
 						</p>
 						<p class="my-1 opciones-claras">
 							<a
 								class="link-underline-warning link-underline-opacity-0 link-underline-opacity-100-hover"
-								href="#?${a.id}">${a.descripcion}</a>
+								href="detalle?id=${a.id}">${a.descripcion}</a>
 						</p>
 						<p class="my-1 opciones-claras">
 							<a class="link-underline link-underline-opacity-0" href="#">
@@ -76,4 +76,4 @@
 		</div>
 	</div>
 </div>
-<%@ include file="/WEB-INF/vistas/includes/pie.jsp"%>" %>
+<%@ include file="/WEB-INF/vistas/includes/pie.jsp"%>"
