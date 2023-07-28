@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBHelper {
-	private static final String URL = "jdbc:sqlite:C:\\Users\\java\\git\\java-2556\\amazonia\\sql\\amazonia.db";
+	private static final String URL = "jdbc:sqlite:C:\\Users\\arant\\git\\javahobetuz\\amazonia\\sql\\amazonia.db";
 	
 	static {
 		try {
