@@ -1,13 +1,15 @@
 package com.ipartek.formacion.amazonia.controladores;
 
+import static com.ipartek.formacion.amazonia.controladores.DBHelper.getConexion;
+
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.ipartek.formacion.amazonia.modelos.*;
+import com.ipartek.formacion.amazonia.modelos.Articulo;
+import com.ipartek.formacion.amazonia.modelos.Cesta;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -19,17 +21,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class CestaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static final String URL = "jdbc:sqlite:C:\\Users\\arant\\git\\javahobetuz\\amazonia\\sql\\amazonia.db";
-
 	private static final String SQL_SELECT_ID = "SELECT * FROM articulos WHERE id = ?";
-
-	static {
-		try {
-			Class.forName("org.sqlite.JDBC");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -47,7 +39,7 @@ public class CestaServlet extends HttpServlet {
 		
 		Articulo articulo = null;
 
-		try (Connection con = DriverManager.getConnection(URL);
+		try (Connection con = getConexion();
 				PreparedStatement pst = con.prepareStatement(SQL_SELECT_ID);
 				) {
 			pst.setLong(1, id);

@@ -1,4 +1,4 @@
-package com.ipartek.formacion.controladores;
+package com.ipartek.formacion.backend.controladores;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ipartek.formacion.modelos.Producto;
+import com.ipartek.formacion.backend.modelos.Producto;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -18,20 +18,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/admin/index")
-public class AdminIndexServlet extends HttpServlet {
+@WebServlet("/index")
+public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Producto> productos = new ArrayList<>();
 
-		try {
-			Class.forName("org.sqlite.JDBC");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
 		try (Connection con = new DBHelper(getServletContext()).getConexion();
 				PreparedStatement pst = con.prepareStatement(DBHelper.SQL_SELECT);
 				ResultSet rs = pst.executeQuery()) {
@@ -46,6 +40,6 @@ public class AdminIndexServlet extends HttpServlet {
 		
 		request.setAttribute("productos", productos);
 		
-		request.getRequestDispatcher("/WEB-INF/vistas/admin/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/vistas/index.jsp").forward(request, response);
 	}
 }

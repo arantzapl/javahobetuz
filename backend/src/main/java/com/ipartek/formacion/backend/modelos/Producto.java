@@ -1,4 +1,4 @@
-package com.ipartek.formacion.modelos;
+package com.ipartek.formacion.backend.modelos;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

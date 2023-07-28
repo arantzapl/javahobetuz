@@ -1,4 +1,4 @@
-package com.ipartek.formacion.controladores;
+package com.ipartek.formacion.backend.controladores;
 
 import java.io.IOException;
 import java.sql.Connection;

@@ -1,4 +1,4 @@
-package com.ipartek.formacion.controladores;
+package com.ipartek.formacion.backend.controladores;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-import com.ipartek.formacion.modelos.Producto;
+import com.ipartek.formacion.backend.modelos.Producto;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

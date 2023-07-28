@@ -1,4 +1,4 @@
-package com.ipartek.formacion.backend;
+package com.ipartek.formacion.backend.controladores;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ipartek.formacion.modelos.Producto;
+import com.ipartek.formacion.backend.modelos.Producto;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

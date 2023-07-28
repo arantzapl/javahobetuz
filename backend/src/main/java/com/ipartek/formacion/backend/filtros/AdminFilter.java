@@ -1,4 +1,4 @@
-package com.ipartek.formacion.filtros;
+package com.ipartek.formacion.backend.filtros;
 
 import java.io.IOException;
 
