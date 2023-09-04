@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.ipartek.formacion.modelos.*, java.util.List" %>
+    pageEncoding="UTF-8" import="com.ipartek.formacion.backend.modelos.*, java.util.List" %>
 <%
 Object o = request.getAttribute("productos");
 
